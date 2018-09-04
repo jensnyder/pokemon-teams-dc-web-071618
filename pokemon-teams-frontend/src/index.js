@@ -68,7 +68,7 @@ function addPokemonFetch(event) {
   .then(pokemonData => renderPokemon(pokemonData))
 }
 
-// Whenever a user hits Release Pokemon on a specific Pokemon team, that specific Pokemon should be released from the team.(patch request)
+// Whenever a user hits Release Pokemon on a specific Pokemon team, that specific Pokemon should be released from the team.(delete request)
 function releasePokemonFetch() {
   let pokemonId = parseInt(event.target.id.split(" ")[1])
   fetch(`${POKEMONS_URL}/${pokemonId}`, {
